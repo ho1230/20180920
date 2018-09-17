@@ -25,10 +25,8 @@ int factorial(int number) {
     assert(number >= 0);
 
     int value = 1;
-    if (number > 0) {
-        for (int i = 2; i <= number; ++i) {
-            value *= i;
-        }
+    for (int i = 2; i <= number; ++i) {
+        value *= i;
     }
 
     return value;
@@ -38,7 +36,7 @@ double exponent(float power, int powerTerms) {
     /**
      * Get an approximation for the exponent.
      * - power: The power for the exponent.
-     * - powerTerms: Number of terms to use after the initial 1 of the summation.
+     * - powerTerms: Number of terms to use after the first (1) term.
      */
     assert(powerTerms >= 0);
 
