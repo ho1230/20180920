@@ -7,6 +7,7 @@
 #include <iostream>
 #include <csignal>
 #include "ex1/run.h"
+#include "ex2/run.h"
 
 int main(int argc, char *argv[]) {
     // Exit with -1 on abort (mainly assertion failure).
@@ -15,12 +16,15 @@ int main(int argc, char *argv[]) {
     });
 
     auto showUsage = []() {
-        std::cerr << "Usage: run 1" << std::endl;
+        std::cerr << "Usage: run 1|2" << std::endl;
     };
     if (argc == 2) {
         switch (std::atoi(argv[1])) {
             case 1:
                 ex1::run();
+                break;
+            case 2:
+                ex2::run();
                 break;
             default:
                 showUsage();

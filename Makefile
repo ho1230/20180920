@@ -4,8 +4,8 @@
 
 INC = -I. -I/usr/local/include
 LIB = -L/usr/local/lib
-G++ = g++ -std=c++17 -g $(INC) $(LIB) -o $@ $^
-SRC = ex1/*.cpp
+G++ = g++ -std=gnu++17 -g $(INC) $(LIB) -o $@ $^
+SRC = ex?/*.cpp
 TST = tests/*.cpp
 
 all: run test
